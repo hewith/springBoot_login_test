@@ -1,0 +1,28 @@
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://116.62.110.45:3306/blog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: XXXX
+    password: XXXX
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+#  global-config:
+#    id-type: 2
+#    db-column-underline: true #驼峰下划线转换
+#    logic-delete-value: 101003  #配置逻辑删除字段为1是删除
+#    logic-not-delete-value: 101001 #配置逻辑删除字段为101001是未删除
+
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: XXXX:6379
+    password: XXXX
+hs:
+  jwt:
+    # 加密秘钥
+    secret: XXXX
+    # token有效时长，7天，单位秒
+    expire: 604800
+    header: token
+
